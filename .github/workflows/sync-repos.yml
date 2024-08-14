@@ -22,15 +22,9 @@ jobs:
         repository: nayanamadhusoodanan/QA_Changes2
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Sync changes to QA_Changes2
+    - name: Sync files
       run: |
-        git config --global user.email "QA_Changes1@noreply.github.com"
-        git config --global user.name "GitHub Action"
-
-        cd QA_Changes2
-
-        # Copy changes from QA_Changes1 to QA_Changes2
-        cp -r ../QA_Changes1/* . || exit 1  # Exit on error
+        rsync -av --delete . ../QA_Changes2/  # Sync the files
 
     #     # Commit and push changes
     #     git add .
