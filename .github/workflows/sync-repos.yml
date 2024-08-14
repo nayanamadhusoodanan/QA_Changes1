@@ -16,11 +16,11 @@ jobs:
         repository: nayanamadhusoodanan/QA_Changes1
         token: ${{ secrets.SECRET1 }}
         
-    - name: Checkout QA_Changes2
-      uses: actions/checkout@v3
-      with:
-        repository: nayanamadhusoodanan/QA_Changes2
-        token: ${{ secrets.SECRET1 }}
+    # - name: Checkout QA_Changes2
+    #   uses: actions/checkout@v3
+    #   with:
+    #     repository: nayanamadhusoodanan/QA_Changes2
+    #     token: ${{ secrets.SECRET1 }}
 
     # - name: Sync changes to QA_Changes2
     #   run: |
