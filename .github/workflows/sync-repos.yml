@@ -23,15 +23,15 @@ jobs:
         path: QA_Changes2
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Sync files
-      run: |
-        rsync -av --delete . ../QA_Changes2/  # Sync the files
+    # - name: Sync files
+    #   run: |
+    #     rsync -av --delete . ../QA_Changes2/  # Sync the files
     
-    - name: Commit and Push changes to QA-Changes2
-      run: |
-        cd QA-Changes2/
-        git config user.name "GitHub Action"
-        git config user.email "action@github.com"
-        git add .
-        git commit -m "Sync from QA-Changes1"
-        git push
+    # - name: Commit and Push changes to QA-Changes2
+    #   run: |
+    #     cd QA-Changes2/
+    #     git config user.name "GitHub Action"
+    #     git config user.email "action@github.com"
+    #     git add .
+    #     git commit -m "Sync from QA-Changes1"
+    #     git push
