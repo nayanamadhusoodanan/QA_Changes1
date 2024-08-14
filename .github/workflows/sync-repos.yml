@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main  # or the branch you want to watch for changes
-
 jobs:
   sync:
     runs-on: ubuntu-latest
