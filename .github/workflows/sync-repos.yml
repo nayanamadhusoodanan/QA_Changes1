@@ -27,10 +27,10 @@ jobs:
         git config --global user.email "nayanamadhusoodanan@github.com"
         git config --global user.name "nayana"
 
-    #     cd QA_Changes2
+        cd QA_Changes2
 
-    #     # Copy changes from QA_Changes1 to QA_Changes2
-    #     cp -r ../QA_Changes1/* . || exit 1  # Exit on error
+        # Copy changes from QA_Changes1 to QA_Changes2
+        cp -r ../QA_Changes1/* . || exit 1  # Exit on error
 
     #     # Commit and push changes
     #     git add .
