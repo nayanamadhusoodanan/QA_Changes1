@@ -26,7 +26,11 @@ jobs:
       run: |
         rsync -av --delete . ../QA_Changes2/  # Sync the files
 
-    #     # Commit and push changes
-    #     git add .
-    #     git commit -m "Sync changes from QA_Changes1" || exit 1  # Exit on error
-    #     git push origin main  # or the branch you want to push to in repo2
+    - name: Commit and Push changes to QA-Changes2
+      run: |
+        cd ../QA-Changes2/
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        git add .
+        git commit -m "Sync from QA-Changes1"
+        git push
