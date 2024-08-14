@@ -24,8 +24,8 @@ jobs:
 
     - name: Sync changes to QA_Changes2
       run: |
-        git config --global user.email "nayanamadhusoodanan@github.com"
-        git config --global user.name "nayana"
+        git config --global user.email "QA_Changes1@noreply.github.com"
+        git config --global user.name "GitHub Action"
 
         cd QA_Changes2
 
