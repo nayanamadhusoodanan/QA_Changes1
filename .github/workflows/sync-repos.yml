@@ -28,7 +28,7 @@ jobs:
     
     - name: Commit and Push changes to QA-Changes2
       run: |
-        cd QA-Changes2/
+        cd QA_Changes2/
         git config user.name "GitHub Action"
         git config user.email "action@github.com"
         git add .
