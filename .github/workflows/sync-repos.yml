@@ -1,0 +1,38 @@
+name: Sync QA-Changes1 to QA-Changes2
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to watch for changes
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout QA_Changes1
+      uses: actions/checkout@v3
+      with:
+        repository: /nayanamadhusoodanan/QA_Changes1
+        token: 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
+        
+    - name: Checkout QA_Changes2
+      uses: actions/checkout@v3
+      with:
+        repository: /nayanamadhusoodanan/QA_Changes2
+        token: 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
+
+    # - name: Sync changes to QA_Changes2
+    #   run: |
+    #     git config --global user.email "nayanam-ext-eightfold@github.com"
+    #     git config --global user.name "nayana"
+
+    #     cd QA_Changes2
+
+    #     # Copy changes from QA_Changes1 to QA_Changes2
+    #     cp -r ../QA_Changes1/* . || exit 1  # Exit on error
+
+    #     # Commit and push changes
+    #     git add .
+    #     git commit -m "Sync changes from QA_Changes1" || exit 1  # Exit on error
+    #     git push origin main  # or the branch you want to push to in repo2
