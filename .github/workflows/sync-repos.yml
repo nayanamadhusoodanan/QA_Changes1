@@ -14,13 +14,13 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: nayanamadhusoodanan/QA_Changes1
-        token: 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
+        token: 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
         
     - name: Checkout QA_Changes2
       uses: actions/checkout@v3
       with:
         repository: nayanamadhusoodanan/QA_Changes2
-        token: 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
+        token: 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
 
     # - name: Sync changes to QA_Changes2
     #   run: |
