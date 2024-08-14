@@ -24,7 +24,7 @@ jobs:
 
     - name: Sync files
       run: |
-        rsync -av --delete QA_Changes1/ QA_Changes2/
+        rsync -av --delete . QA_Changes2/
     
     - name: Commit and Push changes to QA-Changes2
       run: |
