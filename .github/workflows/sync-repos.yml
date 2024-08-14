@@ -20,6 +20,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: nayanamadhusoodanan/QA_Changes2
+        path: QA_Changes2
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Sync files
@@ -28,7 +29,7 @@ jobs:
     
     - name: Commit and Push changes to QA-Changes2
       run: |
-        cd ../QA-Changes2/
+        cd QA-Changes2/
         git config user.name "GitHub Action"
         git config user.email "action@github.com"
         git add .
